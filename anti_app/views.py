@@ -10,7 +10,7 @@ from django.contrib import messages
 import random, string
 from django.contrib.auth.decorators import login_required
 
-t0 = None
+t0 = t.time()
 ans = ['Jersey Shacket', 'Vintage Straight High Jeans', 'Long Hoodie', 'Cable-knit Sweater', 'Fine-knit Sweater', 'Flock-print Hoodie', 'Wrapover-back Sweater']
 
 class Cart(generic.ListView):
