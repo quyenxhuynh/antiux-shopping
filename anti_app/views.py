@@ -37,6 +37,7 @@ def create(request):
             password = ''.join([random.choice(string.digits + string.ascii_letters) for i in range(16)])
             acc.set_password(password)
             acc.save()
+            messages.info("hope you're paying attention... your new password is " + password)
             return redirect('anti-instructions')
     else:
         form = CreateUserForm()
