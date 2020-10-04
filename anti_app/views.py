@@ -38,7 +38,7 @@ def create(request):
             acc.set_password(password)
             acc.save()
             lol = password
-            messages.info("hope you're paying attention... your new password is " + lol)
+            messages.info(request, "hope you're paying attention... your new password is " + lol)
             return redirect('anti-instructions')
     else:
         form = CreateUserForm()
