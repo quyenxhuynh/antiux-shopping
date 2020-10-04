@@ -22,6 +22,9 @@ class Cart(generic.ListView):
         return Item.objects.filter(in_cart=True)
 
 def start(request):
+    for item in Item.objects.all():
+        item.in_cart = False
+        item.save()
     return render(request, 'anti_app/base.html')
 
 def create(request):
