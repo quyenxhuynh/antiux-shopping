@@ -1,0 +1,30 @@
+{% extends 'anti_app/main.html' %}
+{% load static %}
+{% block content %}
+
+    <h3>Store</h3>
+    <hr>
+
+    {% if items %}
+    
+        <ul>
+            {% for item in items %}
+            
+
+            <li style="list-style: none;"> 
+                <form action="{% url 'add-cart' %}" method="post">
+                    {% csrf_token %}
+                    {{ item.item_name }} ${{ item.price }} <br>
+                    
+                    <input type="hidden" name="name" value="{{ item.item_name }}">
+                    <button type='submit'>Transfer to Carriage</button>
+                </form>
+            
+                
+            </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>There are no items to display... </p>
+    {% endif %}
+{% endblock content %}

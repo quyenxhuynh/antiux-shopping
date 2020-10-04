@@ -1,0 +1,16 @@
+{% extends 'anti_app/main.html' %}
+{% load static %}
+
+{% block content %}
+
+    <h3>Instructions</h3>
+    <hr>
+    <ol>
+        <li>Navigate through the site to find the <a href="{% url 'anti-items' %}">listed items</a></li> 
+        <li>Add the items to your cart</li>
+        <li>Check out the items using your username and password</li>
+        <li>Enter in the correct information</li>
+        <li>Stop the clock to get your score and see how you did</li>
+    </ol>
+
+{% endblock content %}

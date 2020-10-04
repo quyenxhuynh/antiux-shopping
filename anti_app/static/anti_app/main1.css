@@ -1,0 +1,32 @@
+body{
+	background-color:white;
+	/* margin-top: 1em; */
+}
+
+h1,h2,h3,h4,h5,h6{
+	margin-top: 1em;
+}
+
+.spacing {
+	margin-top: 1em;
+}
+
+a:link {
+	text-decoration: none;
+	color: black;
+  }
+  
+  a:visited {
+	text-decoration: none;
+	color: black;
+  }
+  
+  a:hover {
+	text-decoration: none;
+	color: black;
+  }
+  
+  a:active {
+	text-decoration: none;
+	color: black;
+  }

@@ -1,0 +1,5 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'anti_app/time.css' %}">
+
+{% csrf_token %}
+<h1>Time taken: {{ time }} seconds</h1>

@@ -1,0 +1,21 @@
+{% extends 'anti_app/main.html' %}
+{% load static %}
+
+{% block content %}
+<li>hope you remember your username and password...</li>
+    <h3>Check out</h3>
+    
+
+    <div class="content-section">
+      <form method="POST">
+          {% csrf_token %}
+          <fieldset class="form-group">
+              <legend class="border-bottom mb-4">Log In</legend>
+              {{ form.as_p }}
+          </fieldset>
+          <div class="form-group">
+              <button class="btn btn-outline-info" type="submit">Login</button>
+          </div>
+      </form>
+  </div>
+{% endblock content %}

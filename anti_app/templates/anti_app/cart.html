@@ -1,0 +1,32 @@
+{% extends 'anti_app/main.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="row">
+
+		<div class="col-lg-6">
+			<div class="box-element">
+				<h3>Order Summary</h3>
+				<hr>
+				
+				{% if cart_list %}
+				<form action="{% url 'empty-cart' %}" method="GET">
+					<button type="submit">Empty Cart</button>
+				</form>
+				<ul>
+					{% for item in cart_list %}
+					<li>{{ item.item_name }}: ${{ item.price }}</li>
+					{% endfor %}
+				</ul>
+				{% else %}
+				<p>You currently don't have any items in your cart.</p>
+				{% endif %}
+				
+
+				<form action="{% url 'check-cart' %}">
+					<input type="submit" value="Check Items">
+				</form>
+			</div>
+		</div>
+	</div>
+{% endblock content %}
